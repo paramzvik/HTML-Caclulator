@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+   function cl()
+   {
+    var x=Calculator.display.value;
+     x=x*x;
+     return x;
+}
+function mod()
+{
+var y=Calculator.display.value;
+return y/100;
+
+}
+function ac()
+{
+var e=Calculator.display.value;
+return e.slice(0,-1);
+}
+</script>
+	<title>Calci</title>
+	<style>
+		body{
+/*	width:100%;
+	height: 100%;*/
+width:345px;
+height: 552px;
+
+}
+table{
+position: absolute;
+top:5px;
+	border-style: solid;
+border-width:3px;
+border-color: orange;
+	background-color: black;
+width:345px;
+height: 552px;
+}
+.display{
+	width: 330px;
+	border-style: solid;
+	border-color: black;
+	background-color:grey;
+	border-width: 1px;
+	border-radius: 10px;
+   font-size:xx-large;
+   color: white;
+
+}
+input{
+	background-color: dimgray;
+	border-style: solid;
+	border-color: orange;
+	border-radius: 100%;
+	border-width: 1px;
+	width: 76px;
+	height: 76px;
+	color: white;
+  font-size:xx-large;
+  font-family:timesnewroman;
+font-style:bold;
+
+
+}
+.opreator{
+	background-color: spacegrey;
+	border-style: solid;
+	border-color: orange;
+}
+.opreator1{
+	background-color: white;
+	color: black;
+	border-style: solid;
+	border-color: white;
+}
+.zero{
+	border-style: solid;
+	border-radius: 6px;
+	width: 160px;
+background-color: white;
+color:black;
+}
+h4{
+	color: orange;
+	text-align: center;
+	font-family: times new roman;
+}
+h5{
+	color: darkorange;
+	text-align: center;
+	font-family: times new roman;
+}
+
+
+		
+		
+</style>
+	
+	
+</head>
+
+<body>
+<table>
+	<br>
+	<form name="Calculator">
+		<tr><td colspan="4" class="haqyar"><h4>Basic Calculator<h4></td></tr>	<tr><td colspan="4"><input type="text" name="display" class="display"  value=""></td></tr>
+			<tr><td> <input type="button" name="A/C" class="opreator1" value="AC" onclick="Calculator.display.value=ac()" ></td> 
+<td><input type="button" name="%" value="%" class="opreator1" onclick="Calculator.display.value=mod()"></td>
+<td><input type="button" name="square" value="x²" class="opreator1" onclick="Calculator.display.value=cl()"></td>
+<td><input type="button" name="devision" value="÷" class="opreator" onclick="Calculator.display.value+='/'"></td></tr>
+
+			<tr><td><input type="button" name="one" value="1" class="one" onclick="Calculator.display.value+='1'"></td> <td><input type="button" name="two" value="2" class="two" onclick="Calculator.display.value+='2'"></td><td><input type="button" name="three" value="3" class="three" onclick="Calculator.display.value+='3'"></td><td><input type="button" name="minus" value="-" class="opreator" onclick="Calculator.display.value+='-'"></td></tr>
+			<tr><td><input type="button" name="four" value="4" class="four" onclick="Calculator.display.value+='4'"></td> <td><input type="button" name="five" value="5" class="five" value="5" onclick="Calculator.display.value+='5'"></td><td><input type="button" name="six" value="6" class="six" onclick="Calculator.display.value+='6'"></td><td><input type="button" name="pluse" value="+" class="opreator" onclick="Calculator.display.value+='+'"></td></tr>
+			<tr><td><input type="button" name="siven" value="7" class="siven" onclick="Calculator.display.value+='7'"></td> <td><input type="button" name="eight" value="8" class="eight" onclick="Calculator.display.value+='8'"></td><td><input type="button" name="nine" value="9" class="nine" onclick="Calculator.display.value+='9'"></td>
+<td><input type="button" name="multi" value="*" class="opreator" onclick="Calculator.display.value+='*'"></td></tr>
+			<tr><td colspan="2"><input type="button" name="zero" value="0" class="zero" onclick="Calculator.display.value+='0'"></td> <td><input type="button" name="dot" value="." class="opreator" onclick="Calculator.display.value+='.'"></td><td><input type="button" name="equal" value="=" class="opreator" onclick="Calculator.display.value = eval(Calculator.display.value)"></td></tr>
+	</form>
+</table>
+
+
+</body>
+</html>
